@@ -439,6 +439,13 @@ The Gateway API introduces several new resource types that NGF uses. Install the
 kubectl kustomize "https://github.com/nginx/nginx-gateway-fabric/config/crd/gateway-api/standard?ref=v2.1.0" | kubectl apply -f -
 ```
 
+Replace the command above with
+
+```bash
+kubectl kustomize "https://github.com/nginx/nginx-gateway-fabric/config/crd/gateway-api/standard?ref=v2.3.0" | kubectl apply -f -
+```
+To ensure that the CRDs and controller remain version-aligned.
+
 **What gets installed (1-liners):**
 
 * **GatewayClass** – Defines a class of gateways (cluster-wide template for data planes)
